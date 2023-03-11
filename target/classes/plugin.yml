@@ -1,0 +1,4 @@
+name: ConditionalNPCMovement
+version: '1.0'
+main: me.CraftyStudios.ConditionalNPCMovement.Main
+api-version: 1.19

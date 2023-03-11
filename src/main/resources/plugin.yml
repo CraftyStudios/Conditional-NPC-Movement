@@ -1,0 +1,4 @@
+name: ConditionalNPCMovement
+version: '${project.version}'
+main: me.CraftyStudios.ConditionalNPCMovement.Main
+api-version: 1.19

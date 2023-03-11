@@ -1,0 +1,35 @@
+npcs:
+  npc1:
+    id: 1
+    destinations:
+      - world: world
+        target:
+          x: 100
+          y: 64
+          z: 100
+          yaw: 0
+          pitch: 0
+      - world: world
+        target:
+          x: 120
+          y: 64
+          z: 120
+          yaw: 90
+          pitch: 0
+  npc2:
+    id: 2
+    destinations:
+      - world: world
+        target:
+          x: 200
+          y: 64
+          z: 200
+          yaw: 0
+          pitch: 0
+      - world: world
+        target:
+          x: 220
+          y: 64
+          z: 220
+          yaw: 90
+          pitch: 0
