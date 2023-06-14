@@ -1,5 +1,6 @@
 package me.CraftyStudios.ConditionalNPCMovement;
 
+import me.CraftyStudios.ConditionalNPCMovement.Events.CreateDiscretePath;
 import me.CraftyStudios.ConditionalNPCMovement.utils.Logger;
 
 import net.citizensnpcs.api.CitizensAPI;
@@ -17,11 +18,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Main extends JavaPlugin {
+    CreateDiscretePath cdp = new CreateDiscretePath();
 
     List<Location> path = new ArrayList<>();
     List<NPCPath> paths = new ArrayList<>();
     @Override
     public void onEnable() {
+        cdp.createPathWand();
         try {
             Class.forName("net.citizensnpcs.api.CitizensAPI");
         } catch (ClassNotFoundException e) {
