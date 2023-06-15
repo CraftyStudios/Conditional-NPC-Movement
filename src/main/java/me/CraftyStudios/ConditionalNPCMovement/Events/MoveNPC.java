@@ -1,6 +1,8 @@
 package me.CraftyStudios.ConditionalNPCMovement.Events;
 
 import net.citizensnpcs.api.CitizensAPI;
+import net.citizensnpcs.api.ai.Navigator;
+import net.citizensnpcs.api.astar.pathfinder.Path;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
 
@@ -22,5 +24,17 @@ public class MoveNPC {
         NPC npc = CitizensAPI.getNPCRegistry().getById(id);
         npc.faceLocation(loc);
 
+        Navigator n = npc.getNavigator();
+
+        for (Location l : path) {
+            n.setTarget(l);
+            while (n.isNavigating()) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
